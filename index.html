@@ -4,80 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>True Bikaner - Authentic Taste</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Merriweather&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Merriweather', serif;
       line-height: 1.6;
-      background: #fff8f0;
+      background: url('https://i.imgur.com/6n6bWyh.jpg') repeat center center fixed;
+      background-size: cover;
       color: #333;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1604908177522-0400d2c9aacf') center/cover no-repeat;
+      background: linear-gradient(rgba(128,0,0,0.7), rgba(128,0,0,0.7)), url('https://images.unsplash.com/photo-1604908177522-0400d2c9aacf') center/cover no-repeat;
       color: white;
-      padding: 80px 20px;
+      padding: 100px 20px;
       text-align: center;
     }
     header h1 {
       margin: 0;
       font-size: 3rem;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      font-family: 'Poppins', sans-serif;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-top: 10px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      font-family: 'Merriweather', serif;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     }
     nav {
-      background: #800000;
-      padding: 10px;
+      background: #a83232;
+      padding: 12px;
       text-align: center;
+      font-family: 'Poppins', sans-serif;
+      border-bottom: 4px solid #ffd166;
     }
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffd166;
     }
     section {
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
+      background: rgba(255, 248, 240, 0.9);
+      margin: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+    }
+    section h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #a83232;
+      margin-bottom: 20px;
     }
     .services {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
     }
     .card {
       background: white;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
     }
     .card img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 15px;
       margin-bottom: 10px;
     }
     footer {
-      background: #333;
+      background: #a83232;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 25px;
+      border-top: 4px solid #ffd166;
+      font-family: 'Merriweather', serif;
     }
     .btn {
       display: inline-block;
-      padding: 10px 20px;
-      background: #b22222;
-      color: white;
+      padding: 12px 24px;
+      background: #ffd166;
+      color: #a83232;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
+      border-radius: 8px;
+      margin-top: 15px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      transition: 0.3s;
     }
     .btn:hover {
-      background: #800000;
+      background: #e6b800;
+      color: white;
     }
   </style>
 </head>
@@ -96,26 +125,16 @@
   <section id="about">
     <h2>About Us</h2>
     <p>At True Bikaner, we bring the authentic taste of Rajasthan to your plate. 
-    Known for our delicious Bhujia and traditional Rajasthani snacks, we are committed to quality, tradition, and the flavors of Bikaner.</p>
+    Known for our delicious <strong>Bikaneri Bhujia</strong>, we are committed to quality, tradition, and the flavors of Bikaner.</p>
   </section>
 
   <section id="products">
-    <h2>Our Specialties</h2>
+    <h2>Our Specialty</h2>
     <div class="services">
       <div class="card">
         <img src="https://images.unsplash.com/photo-1604908578121-c9c4f1d7d2f7" alt="Bikaneri Bhujia">
         <h3>Bikaneri Bhujia</h3>
         <p>The classic spicy snack that made Bikaner famous worldwide.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1589308078055-52b0d9a802d2" alt="Namkeen Mix">
-        <h3>Namkeen Mix</h3>
-        <p>A crunchy mix of traditional Rajasthani flavors.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1626076594800-6d5d6c41fba5" alt="Rajasthani Sweets">
-        <h3>Sweets</h3>
-        <p>Authentic Rajasthani mithai made with love and tradition.</p>
       </div>
     </div>
   </section>
