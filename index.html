@@ -3,203 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>True Bikaner - Authentic Taste</title>
-<meta name="description" content="True Bikaner brings you authentic Rajasthani snacks like Bikaneri Bhujia. Taste the tradition!">
-<meta name="keywords" content="True Bikaner, Bikaneri Bhujia, Rajasthani snacks, Authentic taste, Bhujia">
+<title>True Bikaner - Authentic Rajasthani Bhujia</title>
+<meta name="description" content="True Bikaner offers authentic Rajasthani snacks, specializing in delicious Bhujia. Order online and enjoy free delivery!">
+<meta name="keywords" content="True Bikaner, Bhujia, Rajasthani snacks, authentic taste, buy bhujia online">
 <link rel="icon" href="1000153170-removebg-preview.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <style>
-/* Basic Reset */
-* {margin:0; padding:0; box-sizing:border-box;}
-body {font-family: 'Poppins', sans-serif; background:#f5f0e6; color:#333;}
-a {text-decoration:none; color:inherit;}
-img {max-width:100%; display:block;}
-.container {width:90%; max-width:1200px; margin:0 auto;}
-header {background:#800000; color:#fff; padding:20px; text-align:center; position: relative;}
-header img {width:60px; vertical-align: middle;}
-header h1 {display:inline; font-family: 'Great Vibes', cursive; font-size:36px; margin-left:10px;}
-.hero {position:relative; background:url('depositphotos_213213266-stock-illustration-animation-landscape-ancient-indian-city.jpg') no-repeat center/cover; height:80vh; display:flex; justify-content:center; align-items:center; color:#fff; text-align:center;}
-.popup {position:absolute; top:50%; left:50%; transform:translate(-50%, -50%) scale(0); background:#fff; color:#800000; padding:20px 40px; font-size:48px; font-family:'Great Vibes', cursive; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.3); animation: pop 1s forwards;}
-@keyframes pop {0%{transform:translate(-50%,-50%) scale(0);} 70%{transform:translate(-50%,-50%) scale(1.2);} 100%{transform:translate(-50%,-50%) scale(1);}}
-section {padding:60px 0;}
-.about, .reviews, .contact, .social {background:#fff; border-radius:15px; padding:40px; margin-bottom:40px; box-shadow:0 5px 15px rgba(0,0,0,0.1);}
-.about h2, .product-section h2, .reviews h2, .contact h2, .social h2 {text-align:center; margin-bottom:30px; color:#800000;}
-.product-section {display:flex; flex-wrap:wrap; justify-content:center; gap:20px;}
-.product-card {background:#fff5f0; border-radius:15px; padding:20px; width:300px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:transform 0.3s;}
-.product-card:hover {transform:translateY(-10px);}
-.product-card img {border-radius:15px;}
-.price {font-size:24px; color:#800000; margin:10px 0;}
-.button {background:#800000; color:#fff; padding:10px 20px; border-radius:10px; transition:0.3s;}
-.button:hover {background:#a00000;}
-.free-delivery {background:#ffcc00; color:#800000; font-weight:bold; padding:5px 10px; border-radius:10px; margin-top:5px; display:inline-block;}
-.reviews {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
-.review-card {background:#fff5f0; padding:20px; border-radius:15px; width:250px; box-shadow:0 5px 15px rgba(0,0,0,0.1);}
-.contact form {display:flex; flex-direction:column; gap:10px;}
-.contact input, .contact textarea {padding:10px; border-radius:10px; border:1px solid #ccc;}
-.contact button {background:#800000; color:#fff; padding:10px; border:none; border-radius:10px; cursor:pointer;}
-.social-icons {display:flex; justify-content:center; gap:20px; margin-top:20px;}
-.social-icons a {font-size:32px; color:#800000; transition:0.3s;}
-.social-icons a:hover {color:#a00000;}
-.fadeInUp {opacity:0; transform:translateY(30px); animation: fadeUp 1s forwards;}
-@keyframes fadeUp {to {opacity:1; transform:translateY(0);}}
+body { margin:0; font-family:'Poppins', sans-serif; background:#f7f1e3; }
+header { background:#800000; color:#fff; text-align:center; padding:20px; }
+header img { width:80px; display:block; margin:0 auto 10px; }
+header h1 { margin:0; font-size:2rem; }
+
+#offer-slider { position:relative; width:100%; overflow:hidden; }
+.slides { display:flex; transition:0.5s ease-in-out; }
+.slide { min-width:100%; position:relative; }
+.slide img { width:100%; height:auto; display:block; }
+.slide .overlay { position:absolute; bottom:20px; left:20px; background:rgba(0,0,0,0.5); color:#fff; padding:10px; font-size:1.2rem; border-radius:5px; }
+
+section { padding:50px 20px; text-align:center; }
+.products { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
+.product-card { background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); width:250px; position:relative; }
+.product-card img { width:100%; border-radius:10px; }
+.product-card h3 { margin:10px 0; }
+.product-card .price { font-weight:bold; color:#e74c3c; }
+.product-card a { display:inline-block; margin-top:10px; padding:10px 15px; background:#800000; color:#fff; text-decoration:none; border-radius:5px; }
+.free-delivery { position:absolute; top:10px; left:10px; background:#27ae60; color:#fff; padding:5px 10px; border-radius:5px; font-size:0.9rem; }
+
+.core-values, .about, .reviews, .contact, .social { background:#fff; margin:20px 0; border-radius:15px; padding:40px 20px; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+
+.core-values .slider { display:flex; overflow-x:auto; gap:20px; scroll-behavior:smooth; padding-bottom:10px; }
+.core-values .value { flex:0 0 250px; background:#f39c12; color:#fff; padding:20px; border-radius:10px; }
+
+.about p, .reviews p { max-width:600px; margin:0 auto; }
+
+.social a { text-decoration:none; color:#800000; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:10px; font-size:1.2rem; }
+
+.pop-up { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%) scale(0); background:rgba(255,255,255,0.95); padding:40px 60px; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.3); font-size:2rem; z-index:1000; transition:0.5s; text-align:center; }
+.pop-up.show { transform:translate(-50%,-50%) scale(1); }
+
+a.instagram-icon::before { content: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'); width:20px; height:20px; display:inline-block; }
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<header>
+<!-- Pop-up -->
+<div class="pop-up" id="ghaniPopup">घणी खम्मा</div>
+
+<header data-aos="fade-down">
   <img src="1000153170-removebg-preview.png" alt="True Bikaner Logo">
   <h1>True Bikaner</h1>
 </header>
 
-<div class="hero">
-  <div class="popup">घणी खम्मा</div>
-</div>
-
-<section class="about container fadeInUp">
-  <h2>About True Bikaner</h2>
-  <p>True Bikaner brings you the authentic taste of Rajasthani snacks, made with traditional recipes and premium ingredients. Our Bikaneri Bhujia is loved by snack enthusiasts everywhere.</p>
+<!-- Sliding Banner -->
+<section id="offer-slider" data-aos="fade-up">
+  <div class="slides" id="slides">
+    <div class="slide"><img src="हैप्पी गणेश चतुर्थी - ट्रू बिकानेर.png" alt="Ganesh Chaturthi Offer"><div class="overlay">हैप्पी गणेश चतुर्थी!</div></div>
+    <div class="slide"><img src="Azaadi Ki Swad Bhujia.png" alt="Azaadi Offer"><div class="overlay">Azaadi Ki Swad Bhujia!</div></div>
+    <div class="slide"><img src="True Bikaner_ Sunset & Bhujia Delight.png" alt="Sunset Bhujia Delight"><div class="overlay">Sunset & Bhujia Delight!</div></div>
+  </div>
 </section>
 
-<section class="product-section container fadeInUp">
-  <h2>Our Product</h2>
+<!-- Products Section -->
+<section class="products" data-aos="fade-up">
   <div class="product-card">
-    <img src="be4ba9c1-c583-4e4c-88cd-f22aa885b5a6_removalai_preview.png" alt="Bikaneri Bhujia">
-    <div class="price">₹255</div>
+    <img src="be4ba9c1-c583-4e4c-88cd-f22aa885b5a6_removalai_preview.png" alt="Bikaner Bhujia">
     <div class="free-delivery">Free Delivery</div>
-    <a href="https://www.meesho.com/s/p/9imtdq?utm_source=s_w" target="_blank" class="button">Buy Now</a>
-  </div>
-</section>
-<!-- Core Values Section -->
-<section id="core-values" style="padding: 60px 20px; background: #f7f0e6;">
-  <h2 style="text-align:center; font-family: 'Poppins', sans-serif; font-size: 2.5em; color: #800000; margin-bottom: 40px;">Our Core Values</h2>
-  
-  <div class="slider-container" style="overflow:hidden; position:relative;">
-    <div class="slider-track">
-      <div class="card scroll-animation" style="flex:0 0 250px; background:#fff2e6; border-radius:15px; padding:20px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-right:30px;">
-        <h3>Authenticity</h3>
-        <p>We stay true to Rajasthani taste in every bite.</p>
-      </div>
-      <div class="card scroll-animation" style="flex:0 0 250px; background:#fff2e6; border-radius:15px; padding:20px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-right:30px;">
-        <h3>Quality</h3>
-        <p>Premium ingredients for unmatched flavor.</p>
-      </div>
-      <div class="card scroll-animation" style="flex:0 0 250px; background:#fff2e6; border-radius:15px; padding:20px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-right:30px;">
-        <h3>Tradition</h3>
-        <p>Recipes passed down generations.</p>
-      </div>
-      <div class="card scroll-animation" style="flex:0 0 250px; background:#fff2e6; border-radius:15px; padding:20px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-right:30px;">
-        <h3>Hygiene</h3>
-        <p>Clean and safe preparation every time.</p>
-      </div>
-      <div class="card scroll-animation" style="flex:0 0 250px; background:#fff2e6; border-radius:15px; padding:20px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-right:30px;">
-        <h3>Customer First</h3>
-        <p>Your satisfaction is our top priority.</p>
-      </div>
-    </div>
+    <h3>Bikaner Bhujia</h3>
+    <div class="price">₹255</div>
+    <a href="https://www.meesho.com/s/p/9imtdq?utm_source=s_w" target="_blank">Buy Now</a>
   </div>
 </section>
 
-<!-- Slider & Scroll Animations -->
-<style>
-.slider-container {
-  overflow:hidden;
-}
-.slider-track {
-  display:flex;
-  gap:30px;
-  animation: slide 20s linear infinite;
-}
-.slider-container:hover .slider-track {
-  animation-play-state: paused;
-}
+<!-- Core Values -->
+<section class="core-values" data-aos="fade-up">
+  <h2>Our Core Values</h2>
+  <div class="slider">
+    <div class="value">Authenticity</div>
+    <div class="value">Quality Ingredients</div>
+    <div class="value">Traditional Taste</div>
+    <div class="value">Customer Happiness</div>
+  </div>
+</section>
 
-@keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+<!-- About Section -->
+<section class="about" data-aos="fade-up">
+  <h2>About True Bikaner</h2>
+  <p>True Bikaner brings you the authentic taste of Rajasthan through our signature Bhujia, made with traditional recipes and high-quality ingredients. Experience the true flavor of Bikaner in every bite.</p>
+</section>
 
-/* Scroll Animation */
-.scroll-animation {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease-out;
-}
-.scroll-animation.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>
-
-<script>
-// Scroll animation
-const scrollElements = document.querySelectorAll(".scroll-animation");
-
-const elementInView = (el, offset = 0) => {
-  const elementTop = el.getBoundingClientRect().top;
-  return elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset;
-};
-
-const displayScrollElement = (element) => {
-  element.classList.add("visible");
-};
-
-const handleScrollAnimation = () => {
-  scrollElements.forEach((el) => {
-    if (elementInView(el, 100)) {
-      displayScrollElement(el);
-    }
-  });
-};
-
-window.addEventListener("scroll", handleScrollAnimation);
-window.addEventListener("load", handleScrollAnimation);
-</script>
-  
-<section class="reviews container fadeInUp">
+<!-- Customer Reviews -->
+<section class="reviews" data-aos="fade-up">
   <h2>Customer Reviews</h2>
-  <div class="review-card">"Delicious and authentic taste!" - Rajesh</div>
-  <div class="review-card">"Love the Bikaneri Bhujia, reminds me of home." - Priya</div>
-  <div class="review-card">"Fast delivery and fresh packaging!" - Amit</div>
+  <p>“Absolutely delicious! Reminds me of Bikaner.” – Anjali</p>
+  <p>“Crispy, tasty, and authentic. Highly recommend!” – Rohan</p>
 </section>
 
-<section class="contact container fadeInUp">
+<!-- Contact Section -->
+<section class="contact" data-aos="fade-up">
   <h2>Contact Us</h2>
-  <p>Email: truebikaner@gmail.com</p>
-  <p>Phone: +91 97840 06941</p>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" rows="4" required></textarea>
-    <button type="submit">Send</button>
-  </form>
+  <p>Email: <a href="mailto:truebikaner@gmail.com">truebikaner@gmail.com</a></p>
+  <p>Phone: <a href="tel:+919784006941">+91 97840 06941</a></p>
 </section>
 
-<section class="social container fadeInUp">
+<!-- Social Media -->
+<section class="social" data-aos="fade-up">
   <h2>Join us on Instagram</h2>
-  <div class="social-icons">
-    <a href="https://www.instagram.com/truebikaner/" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
+  <a href="https://www.instagram.com/truebikaner/" target="_blank" class="instagram-icon">Follow @truebikaner</a>
 </section>
 
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-window.addEventListener('load', () => {
-  document.querySelector('.popup').style.animationPlayState = 'running';
-});
+AOS.init({ duration:1000 });
 
-const faders = document.querySelectorAll('.fadeInUp');
-const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
-  entries.forEach(entry => {
-    if(!entry.isIntersecting) return;
-    entry.target.style.animation = 'fadeUp 1s forwards';
-    appearOnScroll.unobserve(entry.target);
-  });
-}, appearOptions);
+// Pop-up animation
+window.onload = function() {
+  const popup = document.getElementById('ghaniPopup');
+  popup.classList.add('show');
+  setTimeout(()=>{ popup.classList.remove('show'); }, 3000);
+};
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
+// Sliding banner animation
+let slideIndex = 0;
+const slides = document.getElementById('slides');
+function showSlides() {
+  slideIndex++;
+  if(slideIndex >= slides.children.length) slideIndex = 0;
+  slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+  setTimeout(showSlides, 4000);
+}
+showSlides();
 </script>
 
 </body>
