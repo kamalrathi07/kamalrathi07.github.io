@@ -4,158 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>True Bikaner - Authentic Taste</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Merriweather&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Marcellus&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Merriweather', serif;
-      line-height: 1.6;
-      background: url('depositphotos_213213266-stock-illustration-animation-landscape-ancient-indian-city.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
+      font-family: 'Raleway', sans-serif;
+      background: url('depositphotos_213213266-stock-illustration-animation-landscape-ancient-indian-city.jpg') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
     }
     header {
-      background: rgba(128, 0, 0, 0.7);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    header img {
-      width: 140px;
-      border-radius: 50%;
-      margin-bottom: 15px;
+      background: rgba(139, 0, 0, 0.8);
+      padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
+    header img {
+      height: 80px;
+    }
     header h1 {
-      margin: 0;
-      font-size: 3rem;
-      font-family: 'Poppins', sans-serif;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      margin: 10px 0 0;
+      font-family: 'Marcellus', serif;
+      font-size: 2.5rem;
     }
     header p {
-      font-size: 1.3rem;
-      margin-top: 10px;
-      font-family: 'Merriweather', serif;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      margin: 5px 0 0;
+      font-size: 1.2rem;
+      font-style: italic;
     }
-    nav {
-      background: #a83232;
-      padding: 12px;
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
-      border-bottom: 4px solid #ffd166;
+    .content {
+      background: rgba(0, 0, 0, 0.6);
+      margin: 40px auto;
+      padding: 30px;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.7);
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: #ffd166;
-    }
-    section {
-      padding: 50px 20px;
-      text-align: center;
-      background: rgba(255, 248, 240, 0.92);
-      margin: 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
-    }
-    section h2 {
-      font-family: 'Poppins', sans-serif;
-      color: #a83232;
-      margin-bottom: 20px;
-    }
-    .services {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      width: 300px;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .card img {
-      width: 100%;
-      border-radius: 15px;
+    .buy-now h3 {
+      font-size: 1.8rem;
       margin-bottom: 10px;
     }
-    footer {
-      background: #a83232;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      border-top: 4px solid #ffd166;
-      font-family: 'Merriweather', serif;
+    .buy-now p {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
     }
-    .btn {
+    .badge {
       display: inline-block;
-      padding: 12px 24px;
-      background: #ffd166;
-      color: #a83232;
-      text-decoration: none;
-      border-radius: 8px;
-      margin-top: 15px;
-      font-family: 'Poppins', sans-serif;
+      background: #16a34a;
+      color: #fff;
+      font-size: 0.9rem;
       font-weight: bold;
-      transition: 0.3s;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
-    .btn:hover {
-      background: #e6b800;
-      color: white;
+    .buy-now img {
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      margin-bottom: 20px;
+    }
+    .buy-now a {
+      background: #b91c1c;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 12px 30px;
+      border-radius: 15px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: background 0.3s ease;
+    }
+    .buy-now a:hover {
+      background: #7f1d1d;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(0,0,0,0.7);
+      font-size: 1rem;
+    }
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <header>
     <img src="1000153170-removebg-preview.png" alt="True Bikaner Logo">
-    <h1>🌟 True Bikaner</h1>
+    <h1>True Bikaner</h1>
     <p>Authentic Taste of Rajasthan</p>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#products">Our Snacks</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>At True Bikaner, we bring the authentic taste of Rajasthan to your plate. 
-    Known for our delicious <strong>Bikaneri Bhujia</strong>, we are committed to quality, tradition, and the flavors of Bikaner.</p>
-  </section>
-
-  <section id="products">
-    <h2>Our Specialty</h2>
-    <div class="services">
-      <div class="card">
-        <img src="be4ba9c1-c583-4e4c-88cd-f22aa885b5a6_removalai_preview.png" alt="Bikaneri Bhujia Packet">
-        <h3>Bikaneri Bhujia</h3>
-        <p>The classic spicy snack that made Bikaner famous worldwide.</p>
-      </div>
+  <div class="content">
+    <div class="buy-now">
+      <h3>Authentic Bikaneri Bhujia</h3>
+      <p class="price">₹255 per 500g Pack</p>
+      <span class="badge">🚚 Free Delivery</span>
+      <br>
+      <img src="be4ba9c1-c583-4e4c-88cd-f22aa885b5a6_removalai_preview.png" alt="Bhujia Packet" width="250">
+      <br>
+      <a href="https://www.meesho.com/s/p/9imtdq?utm_source=s_w" target="_blank">🛒 Buy Now on Meesho</a>
     </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:truebikaner@gmail.com">truebikaner@gmail.com</a></p>
-    <p>Phone: <a href="tel:+919784006941">+91 97840 06941</a></p>
-    <a href="mailto:truebikaner@gmail.com" class="btn">Order Now</a>
-  </section>
+  </div>
 
   <footer>
-    <p>© 2025 True Bikaner. Authentic Taste of Rajasthan.</p>
+    <p>📧 Email: <a href="mailto:truebikaner@gmail.com">truebikaner@gmail.com</a></p>
+    <p>📞 Contact: +91 97840 06941</p>
+    <p>&copy; 2025 True Bikaner. All rights reserved.</p>
   </footer>
 </body>
 </html>
