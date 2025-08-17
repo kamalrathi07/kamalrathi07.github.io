@@ -70,7 +70,92 @@ section {padding:60px 0;}
     <a href="https://www.meesho.com/s/p/9imtdq?utm_source=s_w" target="_blank" class="button">Buy Now</a>
   </div>
 </section>
+<!-- Core Values Section -->
+<section id="core-values" style="padding: 60px 20px; background: #f7f0e6;">
+  <h2 style="text-align:center; font-family: 'Poppins', sans-serif; font-size: 2.5em; color: #800000; margin-bottom: 40px;">Our Core Values</h2>
+  
+  <div class="slider-container" style="overflow:hidden; position:relative;">
+    <div class="slider-track">
+      <div class="card scroll-animation" style="flex:0 0 250px; background:#fff2e6; border-radius:15px; padding:20px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-right:30px;">
+        <h3>Authenticity</h3>
+        <p>We stay true to Rajasthani taste in every bite.</p>
+      </div>
+      <div class="card scroll-animation" style="flex:0 0 250px; background:#fff2e6; border-radius:15px; padding:20px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-right:30px;">
+        <h3>Quality</h3>
+        <p>Premium ingredients for unmatched flavor.</p>
+      </div>
+      <div class="card scroll-animation" style="flex:0 0 250px; background:#fff2e6; border-radius:15px; padding:20px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-right:30px;">
+        <h3>Tradition</h3>
+        <p>Recipes passed down generations.</p>
+      </div>
+      <div class="card scroll-animation" style="flex:0 0 250px; background:#fff2e6; border-radius:15px; padding:20px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-right:30px;">
+        <h3>Hygiene</h3>
+        <p>Clean and safe preparation every time.</p>
+      </div>
+      <div class="card scroll-animation" style="flex:0 0 250px; background:#fff2e6; border-radius:15px; padding:20px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-right:30px;">
+        <h3>Customer First</h3>
+        <p>Your satisfaction is our top priority.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Slider & Scroll Animations -->
+<style>
+.slider-container {
+  overflow:hidden;
+}
+.slider-track {
+  display:flex;
+  gap:30px;
+  animation: slide 20s linear infinite;
+}
+.slider-container:hover .slider-track {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Scroll Animation */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<script>
+// Scroll animation
+const scrollElements = document.querySelectorAll(".scroll-animation");
+
+const elementInView = (el, offset = 0) => {
+  const elementTop = el.getBoundingClientRect().top;
+  return elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset;
+};
+
+const displayScrollElement = (element) => {
+  element.classList.add("visible");
+};
+
+const handleScrollAnimation = () => {
+  scrollElements.forEach((el) => {
+    if (elementInView(el, 100)) {
+      displayScrollElement(el);
+    }
+  });
+};
+
+window.addEventListener("scroll", handleScrollAnimation);
+window.addEventListener("load", handleScrollAnimation);
+</script>
+  
 <section class="reviews container fadeInUp">
   <h2>Customer Reviews</h2>
   <div class="review-card">"Delicious and authentic taste!" - Rajesh</div>
