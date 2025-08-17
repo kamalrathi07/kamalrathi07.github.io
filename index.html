@@ -10,12 +10,14 @@
       margin: 0;
       font-family: 'Raleway', sans-serif;
       background: url('depositphotos_213213266-stock-illustration-animation-landscape-ancient-indian-city.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
       color: #fff;
-      text-align: center;
+      line-height: 1.6;
     }
     header {
-      background: rgba(139, 0, 0, 0.8);
+      background: rgba(139, 0, 0, 0.85);
       padding: 20px;
+      text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
     header img {
@@ -31,32 +33,38 @@
       font-size: 1.2rem;
       font-style: italic;
     }
-    .content {
-      background: rgba(0, 0, 0, 0.6);
-      margin: 40px auto;
-      padding: 30px;
-      max-width: 600px;
+    .section {
+      background: rgba(0, 0, 0, 0.65);
+      margin: 50px auto;
+      padding: 40px 20px;
+      max-width: 900px;
       border-radius: 20px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+      text-align: center;
     }
-    .buy-now h3 {
-      font-size: 1.8rem;
+    .section h2 {
+      font-family: 'Marcellus', serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffd700;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .feature {
+      flex: 1 1 250px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    .feature h3 {
       margin-bottom: 10px;
-    }
-    .buy-now p {
-      font-size: 1.2rem;
-      margin-bottom: 5px;
-    }
-    .badge {
-      display: inline-block;
-      background: #16a34a;
-      color: #fff;
-      font-size: 0.9rem;
-      font-weight: bold;
-      padding: 5px 12px;
-      border-radius: 9999px;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      font-size: 1.3rem;
+      color: #ffcc00;
     }
     .buy-now img {
       border-radius: 20px;
@@ -77,10 +85,36 @@
     .buy-now a:hover {
       background: #7f1d1d;
     }
+    .badge {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: bold;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .review {
+      flex: 1 1 250px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      font-style: italic;
+    }
     footer {
       margin-top: 40px;
       padding: 20px;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.8);
+      text-align: center;
       font-size: 1rem;
     }
     footer a {
@@ -90,24 +124,65 @@
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <img src="1000153170-removebg-preview.png" alt="True Bikaner Logo">
     <h1>True Bikaner</h1>
     <p>Authentic Taste of Rajasthan</p>
   </header>
 
-  <div class="content">
-    <div class="buy-now">
-      <h3>Authentic Bikaneri Bhujia</h3>
-      <p class="price">₹255 per 500g Pack</p>
-      <span class="badge">🚚 Free Delivery</span>
-      <br>
-      <img src="be4ba9c1-c583-4e4c-88cd-f22aa885b5a6_removalai_preview.png" alt="Bhujia Packet" width="250">
-      <br>
-      <a href="https://www.meesho.com/s/p/9imtdq?utm_source=s_w" target="_blank">🛒 Buy Now on Meesho</a>
+  <!-- About Us -->
+  <div class="section">
+    <h2>About Us</h2>
+    <p>At True Bikaner, we bring you the <strong>authentic taste of Rajasthan</strong> with our traditional Bikaneri Bhujia. Made with age-old recipes and premium ingredients, our snacks are more than just food – they’re a slice of culture from the heart of Bikaner.</p>
+  </div>
+
+  <!-- Why Choose Us -->
+  <div class="section">
+    <h2>Why Choose Us</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>🌿 Authentic Taste</h3>
+        <p>Traditional Bikaneri recipes, passed down for generations.</p>
+      </div>
+      <div class="feature">
+        <h3>🥗 Premium Ingredients</h3>
+        <p>Made with handpicked spices & top-quality ingredients.</p>
+      </div>
+      <div class="feature">
+        <h3>🚚 Free Delivery</h3>
+        <p>Enjoy hassle-free free shipping on every order.</p>
+      </div>
+      <div class="feature">
+        <h3>🏰 Made in Bikaner</h3>
+        <p>Directly crafted in the cultural land of Rajasthan.</p>
+      </div>
     </div>
   </div>
 
+  <!-- Product Section -->
+  <div class="section buy-now">
+    <h2>Our Speciality</h2>
+    <h3>Authentic Bikaneri Bhujia</h3>
+    <p class="price">₹255 per 500g Pack</p>
+    <span class="badge">🚚 Free Delivery</span>
+    <br>
+    <img src="be4ba9c1-c583-4e4c-88cd-f22aa885b5a6_removalai_preview.png" alt="Bhujia Packet" width="250">
+    <br>
+    <a href="https://www.meesho.com/s/p/9imtdq?utm_source=s_w" target="_blank">🛒 Buy Now on Meesho</a>
+  </div>
+
+  <!-- Reviews -->
+  <div class="section">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews">
+      <div class="review">“The most authentic Bhujia I’ve ever tasted! Reminded me of my hometown.” – Priya S.</div>
+      <div class="review">“Crispy, fresh, and so tasty. Perfect evening snack with tea!” – Rohit K.</div>
+      <div class="review">“Truly lives up to the name True Bikaner. Highly recommended!” – Aarti M.</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer>
     <p>📧 Email: <a href="mailto:truebikaner@gmail.com">truebikaner@gmail.com</a></p>
     <p>📞 Contact: +91 97840 06941</p>
