@@ -53,16 +53,16 @@ section {padding:60px 0;}
 </header>
 
 <!-- Sliding Banner -->
-<section id="offer-slider" style="height:20vh; overflow:hidden; margin-top:10px;" data-aos="fade-up">
+<section id="offer-slider" style="position:relative; z-index:2; overflow:hidden; margin-top:10px;">
   <div class="slides" id="slides" style="display:flex; transition:0.5s ease-in-out;">
     <div class="slide" style="min-width:100%; position:relative;">
-      <img src="हैप्पी गणेश चतुर्थी - ट्रू बिकानेर.png" alt="Ganesh Chaturthi Offer" style="width:100%; height:100%; object-fit:contain;">
+      <img src="हैप्पी गणेश चतुर्थी - ट्रू बिकानेर.png" alt="Ganesh Chaturthi Offer" style="width:100%; height:auto;">
     </div>
     <div class="slide" style="min-width:100%; position:relative;">
-      <img src="Azaadi Ki Swad Bhujia.png" alt="Azaadi Offer" style="width:100%; height:100%; object-fit:contain;">
+      <img src="Azaadi Ki Swad Bhujia.png" alt="Azaadi Offer" style="width:100%; height:auto;">
     </div>
     <div class="slide" style="min-width:100%; position:relative;">
-      <img src="True Bikaner_ Sunset & Bhujia Delight.png" alt="Sunset Bhujia Delight" style="width:100%; height:100%; object-fit:contain;">
+      <img src="True Bikaner_ Sunset & Bhujia Delight.png" alt="Sunset Bhujia Delight" style="width:100%; height:auto;">
     </div>
   </div>
 </section>
@@ -75,11 +75,11 @@ function showSlides() {
   slideIndex++;
   if(slideIndex >= slides.children.length) slideIndex = 0;
   slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-  setTimeout(showSlides, 4000); // change slide every 4 seconds
+  setTimeout(showSlides, 4000); // 4 seconds per slide
 }
 showSlides();
 </script>
-
+  
   
 <div class="hero">
   <div class="popup">घणी खम्मा</div>
