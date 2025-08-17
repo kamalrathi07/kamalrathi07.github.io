@@ -3,160 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>True Bikaner - Authentic Taste</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Marcellus&display=swap" rel="stylesheet">
-
-  <!-- AOS Animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+  <meta name="description" content="True Bikaner – Authentic Rajasthani Bhujia delivered across India. Handmade snacks with traditional flavors of Rajasthan.">
+  <meta name="keywords" content="Bikaner Bhujia, Rajasthani Snacks, True Bikaner, Indian Snacks Online, Buy Bhujia Online">
+  <meta name="author" content="True Bikaner">
+  <title>True Bikaner | Authentic Rajasthani Bhujia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* GENERAL */
     body {
       margin: 0;
-      font-family: 'Raleway', sans-serif;
-      background: url('depositphotos_213213266-stock-illustration-animation-landscape-ancient-indian-city.jpg') no-repeat center center/cover;
+      font-family: 'Roboto', sans-serif;
+      background: url('depositphotos_213213266-stock-illustration-animation-landscape-ancient-indian-city.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
-      text-align: center;
       scroll-behavior: smooth;
     }
-    a { text-decoration: none; }
-
-    /* HEADER */
     header {
-      background: rgba(139, 0, 0, 0.85);
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 50px;
+      background: rgba(0,0,0,0.6);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    header img { height: 80px; }
-    header h1 {
-      margin: 10px 0 0;
-      font-family: 'Marcellus', serif;
-      font-size: 2.5rem;
+    header img {
+      height: 80px;
     }
-    header p { margin: 5px 0 0; font-style: italic; font-size: 1.2rem; }
-
-    /* SECTION STYLING */
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
     section {
-      background: rgba(0, 0, 0, 0.6);
-      margin: 40px auto;
-      padding: 40px 20px;
-      max-width: 800px;
-      border-radius: 20px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+      padding: 100px 20px;
+      text-align: center;
+      animation: fadeIn 2s;
     }
-    h2 { font-size: 2rem; margin-bottom: 20px; font-family: 'Marcellus', serif; }
-
-    /* PRODUCT */
-    .buy-now img { border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.6); margin-bottom: 20px; }
-    .buy-now .price { font-size: 1.5rem; margin-bottom: 10px; }
+    .hero {
+      padding: 150px 20px 100px;
+    }
+    .hero h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 70px;
+      margin-bottom: 10px;
+      animation: slideDown 2s;
+    }
+    .hero p {
+      font-size: 28px;
+      margin-bottom: 50px;
+    }
+    .about, .gallery, .testimonials, .product, .contact {
+      background: rgba(0,0,0,0.6);
+      margin-bottom: 50px;
+      border-radius: 15px;
+    }
+    .about h2, .gallery h2, .product h2, .testimonials h2, .contact h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .about p {
+      font-size: 22px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+    }
+    .gallery img {
+      width: 250px;
+      margin: 15px;
+      border-radius: 15px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+    .product img {
+      max-width: 300px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    .product p {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .buy-button {
+      display: inline-block;
+      background-color: #ffcc00;
+      color: #000;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .buy-button:hover {
+      transform: scale(1.1);
+    }
     .badge {
       display: inline-block;
-      background: #16a34a;
+      background: #00cc66;
       color: #fff;
-      font-weight: bold;
-      padding: 5px 12px;
-      border-radius: 9999px;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      padding: 5px 10px;
+      margin-left: 10px;
+      font-size: 14px;
+      border-radius: 5px;
     }
-    .buy-now a {
-      background: #b91c1c;
+    .testimonial {
+      max-width: 700px;
+      margin: 20px auto;
+      font-style: italic;
+      font-size: 20px;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .testimonial:hover {
+      transform: scale(1.02);
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.7);
+    }
+    .social-icons a {
       color: #fff;
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 12px 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      transition: background 0.3s ease;
+      margin: 0 10px;
+      font-size: 30px;
+      transition: transform 0.3s;
     }
-    .buy-now a:hover { background: #7f1d1d; }
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
 
-    /* ABOUT US & WHY CHOOSE */
-    .about p, .why p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 15px; }
-    .why ul { list-style: none; padding: 0; }
-    .why li { margin: 10px 0; font-size: 1.1rem; }
-
-    /* REVIEWS */
-    .reviews .review { margin-bottom: 20px; font-style: italic; }
-
-    /* CONTACT */
-    .contact p { margin: 10px 0; font-size: 1.1rem; }
-
-    /* FOOTER */
-    footer { margin-top: 40px; padding: 20px; background: rgba(0,0,0,0.7); font-size: 1rem; }
-    footer a { color: #ffd700; }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header data-aos="fade-down">
-    <img src="1000153170-removebg-preview.png" alt="True Bikaner Logo">
-    <h1>True Bikaner</h1>
-    <p>Authentic Taste of Rajasthan</p>
-  </header>
+<header>
+  <img src="1000153170-removebg-preview.png" alt="True Bikaner Logo">
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#product">Product</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <!-- MAIN PRODUCT -->
-  <section class="buy-now" data-aos="zoom-in" data-aos-delay="200">
-    <h2>Authentic Bikaneri Bhujia</h2>
-    <p class="price">₹255 per 500g Pack</p>
-    <span class="badge">🚚 Free Delivery</span>
-    <br>
-    <img src="be4ba9c1-c583-4e4c-88cd-f22aa885b5a6_removalai_preview.png" alt="Bhujia Packet" width="250" data-aos="flip-left" data-aos-delay="400">
-    <br>
-    <a href="https://www.meesho.com/s/p/9imtdq?utm_source=s_w" target="_blank" data-aos="fade-up" data-aos-delay="600">🛒 Buy Now on Meesho</a>
-  </section>
+<section id="hero" class="hero">
+  <h1>True Bikaner</h1>
+  <p>Authentic Taste of Rajasthan</p>
+</section>
 
-  <!-- ABOUT US -->
-  <section class="about" data-aos="fade-right">
-    <h2>About Us</h2>
-    <p>True Bikaner brings you the authentic taste of Rajasthan in every bite. Our Bhujia is handmade with traditional spices, crafted to preserve the rich flavors of Bikaner.</p>
-    <p>Experience the culture, taste, and love of Rajasthan with our snacks delivered right to your doorstep.</p>
-  </section>
+<section id="about" class="about">
+  <h2>About True Bikaner</h2>
+  <p>
+    True Bikaner is a family-run brand dedicated to bringing the authentic flavors of Rajasthan to your doorstep. Our handmade Bhujia and other snacks are crafted using traditional recipes that have been passed down for generations. Experience the taste of heritage in every bite!
+  </p>
+</section>
 
-  <!-- WHY CHOOSE US -->
-  <section class="why" data-aos="fade-left">
-    <h2>Why Choose True Bikaner?</h2>
-    <ul>
-      <li>🌶 100% Authentic Bikaneri Bhujia</li>
-      <li>👐 Handmade with Love</li>
-      <li>⭐ Consistent Quality & Taste</li>
-      <li>🚚 Free Delivery Across India</li>
-    </ul>
-  </section>
+<section id="gallery" class="gallery">
+  <h2>Gallery</h2>
+  <img src="depositphotos_213213266-stock-illustration-animation-landscape-ancient-indian-city.jpg" alt="Rajasthan landscape">
+  <img src="be4ba9c1-c583-4e4c-88cd-f22aa885b5a6_removalai_preview.png" alt="Bikaner Bhujia packet">
+</section>
 
-  <!-- CUSTOMER REVIEWS -->
-  <section class="reviews" data-aos="fade-up">
-    <h2>Customer Reviews</h2>
-    <div class="review">"Absolutely delicious! Reminds me of Bikaner. Highly recommend." - Ramesh K.</div>
-    <div class="review">"The Bhujia was fresh and perfectly spiced. Will order again!" - Priya S.</div>
-    <div class="review">"Love the authenticity and quick delivery." - Ankit M.</div>
-  </section>
+<section id="product" class="product">
+  <h2>Bikaner Bhujia</h2>
+  <img src="be4ba9c1-c583-4e4c-88cd-f22aa885b5a6_removalai_preview.png" alt="500g packet of True Bikaner Bhujia">
+  <p>Price: ₹255 <span class="badge">Free Delivery</span></p>
+  <a href="https://www.meesho.com/s/p/9imtdq?utm_source=s_w" target="_blank" class="buy-button">Buy Now</a>
+</section>
 
-  <!-- CONTACT -->
-  <section class="contact" data-aos="fade-up">
-    <h2>Contact Us</h2>
-    <p>📧 Email: <a href="mailto:truebikaner@gmail.com">truebikaner@gmail.com</a></p>
-    <p>📞 Phone: +91 97840 06941</p>
-  </section>
+<section id="testimonials" class="testimonials">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonial">"Absolutely loved the Bhujia! Authentic taste of Rajasthan delivered to Pune. Highly recommend!" – Priya S.</div>
+  <div class="testimonial">"Crispy, fresh, and flavorful. True Bikaner never disappoints!" – Ramesh K.</div>
+</section>
 
-  <!-- FOOTER -->
-  <footer data-aos="fade-up">
-    &copy; 2025 True Bikaner. All rights reserved.
-  </footer>
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:truebikaner@gmail.com" style="color:#ffcc00;">truebikaner@gmail.com</a></p>
+  <p>Phone: <a href="tel:+919784006941" style="color:#ffcc00;">+91 97840 06941</a></p>
+</section>
 
-  <!-- AOS Animation JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200,
-      once: true,
-    });
-  </script>
+<footer>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/truebikaner/" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+  <p>&copy; 2025 True Bikaner. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
