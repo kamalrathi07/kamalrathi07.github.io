@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,43 +21,85 @@
       color:#fff;
       background: url('depositphotos_213213266-stock-illustration-animation-landscape-ancient-indian-city.jpg') no-repeat center center fixed;
       background-size: cover;
+      overflow-x:hidden;
     }
+
+    /* Header */
     header {
       display:flex; align-items:center; justify-content:space-between;
-      padding:20px 50px; background: rgba(0,0,0,0.5); position:sticky; top:0; z-index:100;
-      backdrop-filter: blur(5px);
+      padding:20px 50px; background: #800000; border-bottom: 3px solid #FFD700; 
+      position:relative; 
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      border-radius:0 0 20px 20px;
     }
-    header img {width: 150px;}
-    header h1 {font-family: 'Playfair Display', serif; font-size:42px; color:#FFD700; text-shadow: 2px 2px 6px rgba(0,0,0,0.7);}
+    header img {width: 150px; border-radius:10px; animation: fadeIn 1.5s;}
+    header h1 {
+      font-family: 'Playfair Display', serif; 
+      font-size:42px; 
+      color:#FFD700; 
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      position:relative;
+      animation: fadeIn 2s;
+    }
+    /* Decorative elements for header */
+    header::after {
+      content:"✨"; position:absolute; top:-10px; right:10px; font-size:24px; animation: sparkle 2s infinite alternate;
+    }
+
+    /* Sections */
     section {
       padding:80px 20px; text-align:center;
       opacity:0; transform: translateY(50px); transition: all 1s ease-out;
       max-width:1000px; margin:30px auto;
       background: rgba(0,0,0,0.4); border-radius:20px; backdrop-filter: blur(4px);
     }
-    section h2 {font-family: 'Playfair Display', serif; font-size:48px; margin-bottom:20px; color:#FFD700; text-shadow: 2px 2px 6px rgba(0,0,0,0.7);}
+    section h2 {
+      font-family: 'Playfair Display', serif; 
+      font-size:48px; margin-bottom:20px; 
+      color:#FFD700; text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
     section p {font-size:20px; margin-bottom:30px; line-height:1.6; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);}
     
+    /* Product */
     .product img {width:300px; border-radius:20px; margin-bottom:20px; box-shadow: 0 0 20px rgba(0,0,0,0.7);}
     .price {font-size:28px; margin-bottom:15px; font-weight:bold;}
-    .buy-button {background-color:#FF4500; color:#fff; padding:15px 30px; text-decoration:none; font-weight:bold; border-radius:10px; transition: transform 0.3s; display:inline-block; margin-bottom:10px;}
+    .buy-button {
+      background-color:#FF4500; color:#fff; padding:15px 30px; text-decoration:none; 
+      font-weight:bold; border-radius:10px; transition: transform 0.3s; display:inline-block; margin-bottom:10px;
+    }
     .buy-button:hover {transform: scale(1.1);}
     
     .badge {background-color:#32CD32; color:#fff; padding:10px 20px; border-radius:50px; font-weight:bold; font-size:18px; display:inline-block; margin-top:10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);}
     .badge i {margin-right:8px; color:#fff;}
     
+    /* Social Section */
     .social {background: rgba(255,165,0,0.5);}
     .social .buy-button {background-color:#E1306C;}
-    
     .social-icons i {font-size:32px; color:#fff; margin:0 10px; transition: transform 0.3s;}
     .social-icons i:hover {transform: scale(1.2); color:#FFD700;}
-    
+
+    /* Reviews */
     .reviews {display:flex; flex-wrap:wrap; justify-content:center; gap:20px;}
     .review-card {background: rgba(0,0,0,0.6); padding:20px; border-radius:15px; width:280px; transition: transform 0.5s; box-shadow: 0 0 20px rgba(0,0,0,0.5);}
     .review-card:hover {transform: scale(1.05);}
-    
+
+    /* Footer */
     footer {padding:30px 20px; background: rgba(0,0,0,0.6); text-align:center;}
-    #greeting {position:fixed; top:50%; left:50%; transform:translate(-50%,-50%) scale(0); font-size:80px; color:#FFD700; background: rgba(0,0,0,0.7); padding:50px 100px; border-radius:20px; z-index:200; transition: transform 0.6s ease-out; text-shadow: 2px 2px 8px rgba(0,0,0,0.8);}
+
+    /* Pop-up Greeting */
+    #greeting {
+      position:fixed; top:50%; left:50%; transform:translate(-50%,-50%) scale(0);
+      font-size:80px; color:#FFD700; background: rgba(128,0,0,0.8); padding:50px 100px; border-radius:20px;
+      z-index:200; transition: transform 0.6s ease-out; text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    }
+
+    /* Contact Section */
+    .contact a {color:#FFD700; text-decoration:none; font-weight:bold;}
+    .contact i {margin-right:10px;}
+
+    /* Animations */
+    @keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
+    @keyframes sparkle {from {transform: rotate(0deg);} to {transform: rotate(20deg);}}
   </style>
 </head>
 <body>
@@ -106,40 +148,44 @@
   <section class="social">
     <h2>Join Us on Instagram</h2>
     <p>Follow us to get the latest updates, offers, and behind-the-scenes of True Bikaner Bhujia!</p>
-    <a href="https://www.instagram.com/truebikaner/" target="_blank" class="buy-button">
-      <i class="fab fa-instagram"></i> Follow Us
-    </a>
+    <a href="https://www.instagram.com/truebikaner" target="_blank" class="buy-button">Follow Us</a>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/truebikaner" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p><i class="fas fa-envelope"></i> Email: info@truebikaner.com</p>
+    <p><i class="fas fa-phone"></i> Phone: +91-XXXXXXXXXX</p>
+  </section>
+
   <footer>
-    <p>Contact us: truebikaner@gmail.com | +91 97840 06941</p>
-    <p>&copy; 2025 True Bikaner. All Rights Reserved.</p>
+    &copy; 2025 True Bikaner. All Rights Reserved.
   </footer>
 
-  <!-- Scroll Animation JS -->
   <script>
-    // Greeting pop-up
+    // Pop-up Greeting Animation
     window.addEventListener('load', () => {
       const greeting = document.getElementById('greeting');
       greeting.style.transform = 'translate(-50%,-50%) scale(1)';
-      setTimeout(() => { greeting.style.transform = 'translate(-50%,-50%) scale(0)'; }, 2000);
+      setTimeout(() => { greeting.style.transform = 'translate(-50%,-50%) scale(0)'; }, 2500);
     });
 
-    // Scroll animations
+    // Scroll fade-in sections
     const sections = document.querySelectorAll('section');
-    const options = { threshold: 0.1 };
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if(entry.isIntersecting){
           entry.target.style.opacity = 1;
           entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
         }
       });
-    }, options);
+    }, { threshold:0.3 });
 
     sections.forEach(section => observer.observe(section));
   </script>
+
 </body>
 </html>
