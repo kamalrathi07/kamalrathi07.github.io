@@ -60,53 +60,34 @@ section {padding:60px 0;}
 
 </header>
   
-
-<!-- Sliding Offer Banner with Aesthetic Border -->
-<section id="offer-slider" style="
-    margin:0 auto; 
-    padding:0; 
-    position:relative; 
-    z-index:2; 
-    overflow:hidden; 
-    height:20vh; 
-    display:flex; 
-    justify-content:center; 
-    align-items:center; 
-    background-color:#f5f0e1; 
-    border: 4px solid #d2691e; /* Maroonish border */
-    border-radius: 15px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
-    width:90%;
-">
-  <div class="slides" id="slides" style="display:flex; width:300%; transition:0.5s ease-in-out;">
-    <div class="slide" style="flex:0 0 100%; display:flex; justify-content:center; align-items:center;">
-      <img src="हैप्पी गणेश चतुर्थी - ट्रू बिकानेर.png" alt="Ganesh Chaturthi Offer" style="width:100%; height:100%; object-fit:contain; border-radius:12px;">
-    </div>
-    <div class="slide" style="flex:0 0 100%; display:flex; justify-content:center; align-items:center;">
-      <img src="Azaadi Ki Swad Bhujia.png" alt="Azaadi Offer" style="width:100%; height:100%; object-fit:contain; border-radius:12px;">
-    </div>
-    <div class="slide" style="flex:0 0 100%; display:flex; justify-content:center; align-items:center;">
-      <img src="True Bikaner_ Sunset & Bhujia Delight.png" alt="Sunset Bhujia Delight" style="width:100%; height:100%; object-fit:contain; border-radius:12px;">
-    </div>
+<!-- Banner Slider Section -->
+<div style="border:5px solid #FFA500; border-radius:10px; overflow:hidden; margin:0;">
+  <div class="slider" style="position:relative; width:100%; height:20vh; overflow:hidden;">
+    <img src="हैप्पी गणेश चतुर्थी - ट्रू बिकानेर.png" class="slide-img" style="width:100%; height:100%; object-fit:cover;">
+    <img src="Azaadi Ki Swad Bhujia.png" class="slide-img" style="width:100%; height:100%; object-fit:cover;">
+    <img src="True Bikaner_ Sunset & Bhujia Delight.png" class="slide-img" style="width:100%; height:100%; object-fit:cover;">
   </div>
-</section>
-  
+</div>
 
+<!-- Slider Animation Script -->
 <script>
-// Slider animation
-let slideIndex = 0;
-const slides = document.getElementById('slides');
-function showSlides() {
-  slideIndex++;
-  if(slideIndex >= slides.children.length) slideIndex = 0;
-  slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-  setTimeout(showSlides, 4000); // 4 seconds per slide
-}
-showSlides();
-</script>
+let slides = document.querySelectorAll('.slide-img');
+let current = 0;
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+function showSlide(index){
+  slides.forEach((slide,i) => slide.style.display = (i === index) ? 'block' : 'none');
+}
+
+function nextSlide(){
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}
+
+showSlide(current);
+setInterval(nextSlide, 3000); // Slide changes every 3 seconds
+</script>
   
+
   
   
 <div class="hero">
