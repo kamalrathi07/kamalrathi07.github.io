@@ -90,9 +90,36 @@ setInterval(nextSlide, 3000); // Slide changes every 3 seconds
 
   
   
-<div class="hero">
-  <div class="popup">घणी खम्मा</div>
-</div>
+<!-- Welcome Section -->
+<section id="welcome" style="text-align:center; padding:50px 20px; font-family: 'Poppins', sans-serif; background-color:#fff;">
+  <h2 id="welcome-title" style="font-size:40px; color:#800000; margin-bottom:20px; opacity:0; transform:translateY(-30px);">
+    Welcome to True Bikaner
+  </h2>
+  <p id="welcome-msg" style="font-size:20px; color:#555; max-width:600px; margin:auto; opacity:0; transform:translateY(30px);">
+    Experience the authentic taste of Rajasthan with our handcrafted Bhujia. Quality, tradition, and flavor in every bite!
+  </p>
+</section>
+
+<!-- Animation Script -->
+<script>
+window.addEventListener('load', () => {
+  const title = document.getElementById('welcome-title');
+  const msg = document.getElementById('welcome-msg');
+
+  // Fade in title
+  title.style.transition = "all 1s ease-out";
+  title.style.opacity = "1";
+  title.style.transform = "translateY(0)";
+
+  // Fade in message with delay
+  setTimeout(() => {
+    msg.style.transition = "all 1s ease-out";
+    msg.style.opacity = "1";
+    msg.style.transform = "translateY(0)";
+  }, 500);
+});
+</script>
+  
 
 <section class="about container fadeInUp">
   <h2>About True Bikaner</h2>
