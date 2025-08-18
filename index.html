@@ -47,47 +47,35 @@ section {padding:60px 0;}
 </head>
 <body>
 
+  
 <!-- Header Section -->
-<header style="background-color:#800000; padding:15px 20px; display:flex; align-items:center; justify-content:space-between; font-family: 'Poppins', sans-serif;">
-  
-  <!-- Logo and Brand Name -->
-  <div style="display:flex; align-items:center;">
-    <img src="1000153170-removebg-preview.png" alt="True Bikaner Logo" 
-         style="height:80px; width:auto; margin-right:15px;">
-    <h1 style="color:white; font-size:28px; margin:0;">True Bikaner</h1>
-  </div>
-
-
+<header style="background-color:#FFF5E1; padding:15px 20px; text-align:center; font-family:'Poppins', sans-serif; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+  <img src="1000153170-removebg-preview.png" alt="True Bikaner Logo" style="height:80px; vertical-align:middle; margin-right:15px;">
+  <span style="font-size:28px; font-weight:bold; color:#800000; vertical-align:middle;">True Bikaner</span>
 </header>
-  
+
 <!-- Banner Slider Section -->
-<div style="border:5px solid #FFA500; border-radius:10px; overflow:hidden; margin:0;">
-  <div class="slider" style="position:relative; width:100%; height:20vh; overflow:hidden;">
-    <img src="हैप्पी गणेश चतुर्थी - ट्रू बिकानेर.png" class="slide-img" style="width:100%; height:100%; object-fit:cover;">
-    <img src="Azaadi Ki Swad Bhujia.png" class="slide-img" style="width:100%; height:100%; object-fit:cover;">
-    <img src="True Bikaner_ Sunset & Bhujia Delight.png" class="slide-img" style="width:100%; height:100%; object-fit:cover;">
+<section id="banner-slider" style="margin-top:0; overflow:hidden;">
+  <div class="slider" style="display:flex; overflow-x:auto; scroll-behavior:smooth;">
+    <img src="हैप्पी गणेश चतुर्थी - ट्रू बिकानेर.png" style="height:20vh; flex-shrink:0; object-fit:cover; margin-right:5px;">
+    <img src="Azaadi Ki Swad Bhujia.png" style="height:20vh; flex-shrink:0; object-fit:cover; margin-right:5px;">
+    <img src="True Bikaner_ Sunset & Bhujia Delight.png" style="height:20vh; flex-shrink:0; object-fit:cover;">
   </div>
-</div>
+</section>
 
-<!-- Slider Animation Script -->
+<!-- Optional Auto Scroll Script -->
 <script>
-let slides = document.querySelectorAll('.slide-img');
-let current = 0;
-
-function showSlide(index){
-  slides.forEach((slide,i) => slide.style.display = (i === index) ? 'block' : 'none');
-}
-
-function nextSlide(){
-  current = (current + 1) % slides.length;
-  showSlide(current);
-}
-
-showSlide(current);
-setInterval(nextSlide, 3000); // Slide changes every 3 seconds
+const slider = document.querySelector('.slider');
+let scrollAmount = 0;
+setInterval(() => {
+  scrollAmount += 1;
+  if(scrollAmount >= slider.scrollWidth - slider.clientWidth){
+    scrollAmount = 0;
+  }
+  slider.scrollTo({left: scrollAmount, behavior:'smooth'});
+}, 30);
 </script>
   
-
   
   
 <!-- Welcome Section -->
