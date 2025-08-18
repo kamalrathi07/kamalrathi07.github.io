@@ -126,15 +126,42 @@ window.addEventListener('load', () => {
   <p>True Bikaner brings you the authentic taste of Rajasthani snacks, made with traditional recipes and premium ingredients. Our Bikaneri Bhujia is loved by snack enthusiasts everywhere.</p>
 </section>
 
-<section class="product-section container fadeInUp">
-  <h2>Our Product</h2>
-  <div class="product-card">
-    <img src="be4ba9c1-c583-4e4c-88cd-f22aa885b5a6_removalai_preview.png" alt="Bikaneri Bhujia">
-    <div class="price">₹255</div>
-    <div class="free-delivery">Free Delivery</div>
-    <a href="https://www.meesho.com/s/p/9imtdq?utm_source=s_w" target="_blank" class="button">Buy Now</a>
+<!-- Combined Product Catalog Section -->
+<section id="product-catalog" style="text-align:center; padding:50px 20px; background-color:#fff;">
+  <h2 style="font-size:36px; color:#800000; margin-bottom:40px; font-family: 'Poppins', sans-serif;">Our Special Products</h2>
+  
+  <div style="display:flex; justify-content:center; align-items:flex-start; flex-wrap:wrap; gap:30px;">
+
+    <!-- Product 1 -->
+    <div style="border:2px solid #FFA500; border-radius:15px; padding:20px; max-width:300px; position:relative; transition: transform 0.3s; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <div style="position:absolute; top:15px; right:15px; background-color:#28a745; color:#fff; padding:5px 10px; border-radius:5px; font-weight:bold; font-size:14px;">Free Delivery</div>
+      <img src="be4ba9c1-c583-4e4c-88cd-f22aa885b5a6_removalai_preview.png" alt="Bikaner Bhujia" style="width:100%; height:auto; border-radius:10px; margin-bottom:15px;">
+      <h3 style="font-size:24px; color:#333; margin-bottom:10px;">Bikaner Bhujia</h3>
+      <p style="font-size:20px; color:#800000; margin-bottom:15px;">₹255</p>
+      <a href="https://www.meesho.com/s/p/9imtdq?utm_source=s_w" style="display:inline-block; padding:10px 20px; background-color:#800000; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;">Buy Now</a>
+    </div>
+
+    <!-- Product 2 -->
+    <div style="border:2px solid #FFA500; border-radius:15px; padding:20px; max-width:300px; position:relative; transition: transform 0.3s; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <div style="position:absolute; top:15px; right:15px; background-color:#28a745; color:#fff; padding:5px 10px; border-radius:5px; font-weight:bold; font-size:14px;">Free Delivery</div>
+      <img src="1000015741-removebg-preview.png" alt="Special Product" style="width:100%; height:auto; border-radius:10px; margin-bottom:15px;">
+      <h3 style="font-size:24px; color:#333; margin-bottom:10px;">Bhujia Deluxe</h3>
+      <p style="font-size:20px; color:#800000; margin-bottom:15px;">₹600</p>
+      <a href="#" style="display:inline-block; padding:10px 20px; background-color:#800000; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;">Buy Now</a>
+    </div>
+
   </div>
 </section>
+
+<!-- Hover Animation Script -->
+<script>
+const productCards = document.querySelectorAll('#product-catalog div');
+productCards.forEach(card => {
+  card.addEventListener('mouseenter', () => card.style.transform = 'scale(1.05)');
+  card.addEventListener('mouseleave', () => card.style.transform = 'scale(1)');
+});
+</script>
+  
 <!-- Core Values Section -->
 <section id="core-values" style="padding: 60px 20px; background: #f7f0e6;">
   <h2 style="text-align:center; font-family: 'Poppins', sans-serif; font-size: 2.5em; color: #800000; margin-bottom: 40px;">Our Core Values</h2>
